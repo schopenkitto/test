@@ -80,12 +80,7 @@ function loadModel(json){
            var ds = json['zone']['device'];
            return Promise.all(ds.map(createDevice, zone));
        });
-       
-    //    .then(function(devices){
-    //            return Promise.all(function(device){
-    //                return device.save();
-    //            })
-    //    });      
+          
 }
  
 exports.index = function (req, res) {
