@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<zone id="11111967" type="dzajjjj" ver="0.1">
+  <device>
+    <ident>40</ident>
+    <id>93</id>
+    <comment>Schacht 1.041 hohoh</comment>
+    <zp_id>1</zp_id>
+  </device>
+  <device>
+    <ident>96</ident>
+    <id>41173</id>
+    <comment>LOG 017 1.074 hihi</comment>
+    <zp_id>2</zp_id>
+    <p_id>143</p_id>
+    <p_ident>40</p_ident>
+  </device>
+  <device>
+    <ident>96</ident>
+    <id>41177</id>
+    <comment>LOG 021 1.085 test teset</comment>
+    <zp_id>4</zp_id>
+    <p_id>155</p_id>
+    <p_ident>40</p_ident>
+  </device>
+</zone>

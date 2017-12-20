@@ -1,0 +1,46 @@
+﻿doctype html
+html
+    head
+        title= title
+        meta(name='viewport' content='width=device-width, initial-scale=1')  
+        link(rel='stylesheet', href='/stylesheets/cloud-admin.css') 
+        link(rel='stylesheet', href='/stylesheets/main.css')  
+        link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    body 
+        //HEADER
+        header.navbar.clearfix(id = 'header')
+            .container
+                .navbar-brand
+                    //COMPANY LOGO
+                    a.img-responsive(href='index.html')
+                    img(src='/images/logo-sebakmt-megger-en.png')
+                // navbar left  margin: 7.5px -15px; float:left
+                ul.nav.navbar-nav.pull-left
+                    li.dropdown   
+                        a.team-status-toggle.dropdown-toggle.tip-bottom(href='#' data-toggle='tooltip' title='Team View')
+                            i.fa.fa-users
+                            span Team View
+                    li.dropdown 
+                        a.dropdown-toggle(href='#' data-toggle='dropdown')
+                            i.fa.fa-angle-down
+                            span Skin
+        section 
+            aside
+                .sidebar(id='sidebar')
+                    .sidebar-menu
+                        ul
+                            li.active
+                                a(href='javascript:;')  dasdfa 
+                                ul
+                                    li.has-sub
+                                        a(href='javascript:;') 
+                                            span.menu-text Baunach
+                                            span.arrow
+                                        ul.sub
+                                    li.has-sub
+                                        a(href='javascript:;') 
+                                            span.menu-text Stuttgart
+                                            span.arrow
+                                        ul.sub
+        block content
+        include footer

@@ -1,0 +1,117 @@
+﻿a {
+    color: #00B7FF;
+}
+
+/*navbar*/
+.navbar {
+    border: solid 1px red;
+    background: scroll #67c9d7;
+    border-radius: 0;
+    margin: 0
+}
+
+    .navbar .navbar-brand {
+        border: solid 1px black;
+        float: left;
+        font-size: 18px;
+        line-height: 20px;
+        width: 250px;
+    }
+
+        .navbar .navbar-brand img {
+            position: relative;
+            border: solid 1px green;
+            max-width: 60%;
+            height: 40px;
+            width: 120px;
+        }
+
+    .navbar .dropdown-toggle {
+        border: solid 1px green;
+        color: #FFFFFF;
+    }
+
+        .navbar .dropdown-toggle i {
+            border: solid 1px green;
+            color: #FFFFFF;
+            font-size: 17px;
+        }
+
+/*end navbar*/
+
+/*sidebar*/
+#sidebar {
+    background: none repeat scroll 0 0 #f4f4f4;
+    padding: 0;
+    width: 180px;
+    float: left;
+    border: dashed 2px #ff6a00;
+}
+
+.sidebar-menu  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .sidebar-menu ul > li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0px;
+    }
+
+        .sidebar-menu ul > li > a {
+            display: block;
+            position: relative;
+            margin: 0;
+            border: 2px #555555;
+            padding: 15px 15px 15px 20px;
+            text-decoration: double;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: 1px solid red;
+        }
+
+.sidebar-menu ul > li.has-sub {
+    position: relative;
+    border: 1px solid #2ec12e;
+}
+
+    .sidebar-menu ul > li.has-sub a {
+        color: #555555;
+        font-size: 16px;
+        margin-right: 5px;
+        text-decoration: underline;
+    }
+
+
+    .sidebar-menu ul > li.has-sub .sub {
+        position: relative;
+        background: #00B7FF;
+        border-top: 0px solid #2ec12e;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    }
+
+.sidebar-menu ul > li > a .arrow:before {
+    float: right;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    display: inline;
+    font-family: FontAwesome;
+    height: auto;
+    font-size: 16px;
+    content: "\f0d7";
+    font-weight: 300;
+    text-shadow: none;
+}
+
+        .sidebar-menu ul > li > a > .menu-text {
+            top: 15px;
+            right: 10px;
+            border: 1px solid #00B7FF;
+        }
+
+
+
