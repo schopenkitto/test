@@ -1,6 +1,20 @@
 ﻿extends layout
 
 block content
+    section 
+        aside
+            .sidebar(id='sidebar')
+                .sidebar-menu
+                    ul
+                        li.active
+                            a(href='javascript:;')
+                            ul
+                            for device in devices
+                                li.has-sub
+                                    a(href='javascript:;') 
+                                        span.menu-text= device.zone
+                                        span.arrow
+                                    ul.sub
     .container(id='main-content')
         .row
             .col-lg-12(id='content')

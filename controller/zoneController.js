@@ -86,8 +86,8 @@ function loadModel(json){
 exports.index = function (req, res) {
     readDZAFile('./public/11111967.dza')
     .then(loadModel)
-    .then(function(){
-        res.render('index', { title: 'Express' });
+    .then(function(devices){
+        res.render('index', { title: 'Express', devices: devices });
     })
     .catch(function(err){
         console.log(err);
