@@ -11,38 +11,44 @@ var measdataModel = require('../models/measdataModel');
 var devices = [];
 var zones = [];
 
-function createDevice(deviceObj) {
-    return deviceModel.findOne({ deviceId: deviceObj.id[0], 
-        deviceType: deviceObj.ident[0]
-    }).then(function(device){
+var currZone;
+
+function createDevice(deviceJSON) {
+    currZone = this;
+    return deviceModel.findOne({ deviceId: deviceJSON.id[0], 
+        deviceType: deviceJSON.ident[0],
+        zone: currZone
+    }).populate('zone')
+    .then(function(device){
         if(device == null){
             device = new deviceModel({
-                deviceId: deviceObj.id[0],
-                deviceType: deviceObj.ident[0],
-                comment: deviceObj.comment[0],
-                zone: this
+                deviceId: deviceJSON.id[0],
+                deviceType: deviceJSON.ident[0],
+                comment: deviceJSON.comment[0],
+                zone: currZone
             });
         }
         else{
-            device.comment = deviceObj.comment[0];
+            device.comment = deviceJSON.comment[0];
         }
+        console.log(device.zone.zoneId);
         return device.save();
     }); 
 }
 
-function createZone(zoneObj){
-    return zoneModel.findOne({ zoneId: zoneObj.id })
+function createZone(zoneJSON){
+    return zoneModel.findOne({ zoneId: zoneJSON.id })
     .then(function(zone){
         if(zone == null){
             zone = new zoneModel({
-                zoneId: zoneObj.id,
-                zoneType: zoneObj.type,
-                comment: zoneObj.comment
+                zoneId: zoneJSON.id,
+                zoneType: zoneJSON.type,
+                comment: zoneJSON.comment
             });
         }
         else{
-            zone.zoneType = zoneObj.type,
-            zone.comment = zoneObj.comment
+            zone.zoneType = zoneJSON.type,
+            zone.comment = zoneJSON.comment
         }
         return zone.save();
     });
