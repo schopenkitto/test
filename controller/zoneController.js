@@ -31,7 +31,7 @@ function createDevice(deviceJSON) {
         else{
             device.comment = deviceJSON.comment[0];
         }
-        console.log(device.zone.zoneId);
+        //console.log(device.zone.zoneId);
         return device.save();
     }); 
 }
