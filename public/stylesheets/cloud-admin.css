@@ -7797,7 +7797,7 @@ div.hint {
 @media only screen and (min-width: 700px) {
   .dd {
     float: left;
-    width: 48%;
+    width:96%;
   }
   .dd + .dd {
     margin-left: 2%;

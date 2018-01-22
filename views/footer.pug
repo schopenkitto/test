@@ -1,9 +1,14 @@
 ﻿script(src="/javascripts/jquery.min.js")
 script(src="/javascripts/bootstrap.min.js")
 script(src="/javascripts/jquery.dataTables.js")
+script(src="/javascripts/fuelux.tree.min.js")
+script(src="/javascripts/jquery.nestable.min.js")
 script(src="/javascripts/script.js")
 
 script.
+    $('#nestable').nestable();
     $(document).ready(function(){
-       $('#datatable').DataTable();
+        $('#datatable').DataTable(); 
     });
+
+   

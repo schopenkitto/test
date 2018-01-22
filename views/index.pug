@@ -6,17 +6,18 @@ block content
             .sidebar(id='sidebar')
                 .sidebar-menu
                     if devices.length
-                        ul
-                            li.active
-                                a(href='javascript:;')
-                                    span.menu-text= devices[0].zone.zoneId
-                                ul
-                                for device in devices
-                                    li.has-sub
-                                        a(href='javascript:;') 
-                                            span.menu-text= device.deviceId
-                                            span.arrow
-                                        ul.sub
+                        #nestable.dd
+                            ol.dd-list
+                                li.dd-item
+                                    .dd-handle 
+                                        img(src='/images/zone.png')
+                                        span #{devices[0].zone.zoneId}
+                                    ol.dd-list
+                                        for device in devices
+                                            li.dd-item(data-id= device.deviceId)
+                                                .dd-handle 
+                                                    img(src='/images/logn3.png')
+                                                    span #{device.deviceId}                                               
     .container(id='main-content')
         .row
             .col-lg-12(id='content')
